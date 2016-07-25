@@ -1,0 +1,41 @@
+extend layout
+
+block content
+  p
+    a(href='/')
+      h3 HOME  
+  h1 Product Buyers
+  p Showing list of all product buyers.
+  p
+    a#delete.btn.btn-danger(hrer="#") DELETE
+    | 
+    a#add.btn.btn-success(href="/buyers/add") + NEW BUYER
+  table.table.table-hover.table-bordered
+    thead
+      tr
+        th Name
+        th Company
+        th Email
+        th Product Name
+        th Praduct Cost
+        th Options
+    tbody
+      if !buyers.length
+        tr
+          td(colspan=4) No Buyers.You should add a buyer
+      else
+        each buyer in buyers
+          tr
+            td
+              a(href="/buyers/#{buyer.id}") #{buyer.name}
+            td #{buyer.company}
+            td
+              a(href="mailto:#{buyer.email}") #{buyer.email}
+            td #{buyer.productname}
+            td #{buyer.productcost}  
+            td
+              a#edit.btn.btn-primary(href="/buyers/#{buyer.id}") EDIT
+            td
+              a(href="/api_buyers/buyers/#{buyer.id}" target="_blank") JSON Data
+            td
+              input(type="checkbox", id=buyer.id)

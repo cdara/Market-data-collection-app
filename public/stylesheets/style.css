@@ -1,0 +1,45 @@
+body {
+  padding-left: 25px;
+    padding-top: 10px;
+    padding-right: 25px;
+    background-image: url('../images/supply.png');
+    background-repeat:no-repeat;
+    background-size:cover;
+    font-family: Tw Cen MT;
+    font-size: 30px;
+    color: #ffad33;
+}
+
+table{
+  background-color: #b3ffb3 ;
+   color: black;
+   font-size: 20px;
+  
+}
+table a{
+   color: orange;
+  
+}
+a:hover { 
+    color: #1a8cff;
+}
+a {
+  color: #00FF00   ;
+}
+.welcome{
+  font-size: 90px;
+    color: #b3ffb3;
+
+}
+.buyer-div {
+    padding: 20px;
+    float: left;
+    width: 50%;
+  
+}
+.seller-div {
+    padding: 20px;
+    float: right;
+    width: 50%;
+    
+}

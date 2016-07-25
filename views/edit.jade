@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  .row
+    .col-md-6
+      h1 Edit a buyer
+      form(role="form", method="post", action="/buyers/#{buyer.id}?_method=put")
+        include editform
+        button.btn.btn-warning(type="submit") SAVE

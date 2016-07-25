@@ -1,0 +1,41 @@
+extend layout
+
+block content
+  p
+   a(href='/')
+     h3 HOME  
+  h1 Product Sellers
+  p Showing list of all product sellers.
+  p
+    a#delete.btn.btn-danger(hrer="#") DELETE
+    | 
+    a#add.btn.btn-success(href="/sellers/add_seller") + NEW SELLER
+  table.table.table-hover.table-bordered
+    thead
+      tr
+        th Name
+        th Company
+        th Email
+        th Product Name
+        th Praduct Cost
+        th Options
+    tbody
+      if !sellers.length
+        tr
+          td(colspan=4) You should add a seller
+      else
+        each seller in sellers
+          tr
+            td
+              a(href="/sellers/#{seller.id}") #{seller.name}
+            td #{seller.company}
+            td
+              a(href="mailto:#{seller.email}") #{seller.email}
+            td #{seller.productname}
+            td #{seller.productcost}  
+            td
+              a#edit.btn.btn-primary(href="/sellers/#{seller.id}") EDIT
+            td
+              a(href="/api_sellers/sellers/#{seller.id}" target="_blank") JSON Data
+            td
+              input(type="checkbox", id=seller.id)      

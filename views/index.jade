@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  center 
+    #welcome-div.welcome
+      =title
+    #buyer-content.buyer-div
+      p
+        h1 BUYER
+      p
+        a(href='/buyers/add')
+          h2 CREATE NEW BUYER
+      p
+        a(href='/buyers/')
+          h2 SHOW BUYERS
+      p
+        a(href='/api_buyers/buyers/' target="_blank")
+          h2 JSON BUYERS DATA 
+    #seller-content.seller-div
+      p
+        h1 SELLER
+      p
+        a(href='/sellers/add_seller')
+          h2 CREATE NEW SELLER
+      p
+        a(href='/sellers/')
+          h2 SHOW SELLERS
+      p
+        a(href='/api_sellers/sellers/' target="_blank")
+          h2 JSON SELLERS DATA

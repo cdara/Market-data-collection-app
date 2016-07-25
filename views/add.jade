@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  .row
+    .col-md-6
+      p
+       a(href='/')
+         h3 HOME  	
+       a(href='/buyers/')
+         h3 SHOW BUYERS	 
+      h1 Add a buyer
+      form(role="form", method="post", action="/buyers/")
+        include editform
+        button.btn.btn-success(type="submit") CREATE
+        

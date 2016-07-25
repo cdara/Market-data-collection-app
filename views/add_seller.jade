@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  .row
+    .col-md-6
+      p
+       a(href='/')
+         h3 HOME  	
+       a(href='/sellers/')
+         h3 SHOW SELLERS	
+      h1 Add a seller
+      form(role="form", method="post", action="/sellers/")
+        include editform_seller
+        button.btn.btn-success(type="submit") CREATE
+      
